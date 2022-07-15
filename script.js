@@ -45,7 +45,7 @@ ScrollTrigger.matchMedia({
             backgroundSize: "105% 105%"
         });
     },
-    "(max-width: 749px)": function () {
+    "(max-width: 749px) and (hover: hover)": function () {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".hero",
@@ -77,6 +77,27 @@ ScrollTrigger.matchMedia({
             delay: "0.2"
         }).to(".hero", {
             backgroundSize: "105% 105%"
+        });
+    },
+    "(hover: none)" : function(){
+        gsap.set(".logo-transparent", {
+            y: () => {
+                return document.querySelector(".see-through").offsetHeight / -4;
+            },
+            scale: "0.9"
+        }).fromTo(".bowl", {
+            x: 0,
+            y: 0
+        }, {
+            x: () => {
+                return document.querySelector(".see-through").offsetWidth / 2 - 170;
+            },
+            y: () => {
+                return document.querySelector(".see-through").offsetHeight * 3 / 4 - 200;
+            },
+            scale: "0.7"
+        }).set(".bowl", {
+            opacity: "1",
         });
     }
 });
