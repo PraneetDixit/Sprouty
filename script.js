@@ -85,7 +85,8 @@ ScrollTrigger.matchMedia({
                 return document.querySelector(".see-through").offsetHeight / -4;
             },
             scale: "0.9"
-        }).fromTo(".bowl", {
+        });
+        gsap.fromTo(".bowl", {
             x: 0,
             y: 0
         }, {
@@ -96,7 +97,8 @@ ScrollTrigger.matchMedia({
                 return document.querySelector(".see-through").offsetHeight * 3 / 4 - 200;
             },
             scale: "0.7"
-        }).set(".bowl", {
+        });
+        gsap.set(".bowl", {
             opacity: "1",
         });
     }
