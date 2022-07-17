@@ -116,6 +116,19 @@ gsap.fromTo("header", {
     }
 });
 
+gsap.fromTo(".feature-card", {
+    y: "30px",
+    opacity: "0"
+},{
+    y: "0px",
+    opacity: "1",
+    duration: 0.5,
+    scrollTrigger: {
+        trigger: ".feature-trigger",
+        start: "top 200px"
+    }
+});
+
 smoother.effects("span", {
     lag: (i) => (i*0.06) + 0.16
 });

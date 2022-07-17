@@ -138,15 +138,15 @@ img {
     display: inline-block;
 }
 
-
-
 a {
     text-decoration: none;
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     display: flex;
     padding: 15px 70px;
@@ -191,7 +191,8 @@ nav a:last-child:active {
 }
 
 .features {
-    background-color: var(--secondary);
+    background-color: var(--primary);
+    padding-bottom: 50px;
 }
 
 .features h1 {
@@ -199,7 +200,7 @@ nav a:last-child:active {
     text-align: center;
     font-family: "Lobster", cursive;
     font-size: 60px;
-    color: var(--tertiary);
+    color: var(--ascent);
 }
 
 .feature-block {
@@ -236,12 +237,12 @@ nav a:last-child:active {
     width: 65%;
     margin: 0 auto;
     aspect-ratio: 1;
-    background: var(--url) no-repeat center/60% 60%, linear-gradient(var(--primary), var(--primary));
+    background: var(--url) no-repeat center/60% 60%, linear-gradient(var(--secondary), var(--secondary));
     border-radius: 15px;
 }
 
 .feature-card h2 {
-    color: var(--ascent);
+    color: var(--tertiary);
     margin: 15px 0;
     font-size: 24px;
     text-align: center;
@@ -251,6 +252,81 @@ nav a:last-child:active {
     color: rgb(31, 31, 31);
     text-align: center;
 
+}
+
+.recipes{
+    background-color: var(--secondary);
+    padding: 50px 60px;
+}
+
+.recipes h2{
+    color: rgb(0 0 0 / 50%);
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.recipes h2 span{
+    color: var(--ascent);
+}
+
+.recipes p{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0 0 0/ 50%);
+    text-align: center;
+}
+
+.recipes a{
+    color: var(--ascent);
+    text-decoration: underline;
+}
+
+footer{
+    background-color: var(--ascent);
+    padding: 30px 70px;
+}
+
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(246 251 244/ 50%);
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+}
+
+.copyright{
+    color: rgb(255 255 255/ 50%);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.attribution{
+    color: rgb(255 255 255/ 50%);
+    text-align: center;
+    font-size: 18px;
+}
+
+.attribution a{
+    color: var(--secondary);
+}
+
+.sm{
+    display: flex;
+    gap: 28px;
+}
+
+.sm svg{
+    color: rgb(246 251 244/ 50%);
+    transition: color 0.2s;
+}
+
+.sm a:hover svg{
+    color: var(--primary)
 }
 
 @media(min-width: 950px) {
@@ -300,8 +376,19 @@ nav a:last-child:active {
 }
 
 @media (max-width: 500px) {
-    nav a:first-child {
-        display: none;
+    /* TODO: Hamburger */
+}
+
+@media (max-width: 600px){
+    .copyright, .sm{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .sm{
+        justify-content: center;
     }
 }
 
