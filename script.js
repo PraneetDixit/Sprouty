@@ -104,10 +104,8 @@ ScrollTrigger.matchMedia({
     }
 });
 
-gsap.fromTo("header", {
-    yPercent: "-100"
-}, {
-    yPercent: 0,
+gsap.to("header", {
+    y: 0,
     duration: 0.3,
     scrollTrigger: {
         trigger: ".hero",
@@ -131,4 +129,11 @@ gsap.fromTo(".feature-card", {
 
 smoother.effects("span", {
     lag: (i) => (i*0.06) + 0.16
+});
+
+const hamburger = document.querySelector("#hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", function(){
+    nav.classList.toggle("active")
 });

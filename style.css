@@ -17,6 +17,7 @@ body {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
     font-family: "Manrope", sans-serif;
+    background-color: var(--primary);
 }
 
 body::-webkit-scrollbar {
@@ -86,9 +87,9 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 150px;
     gap: 10%;
-    background-color: var(--primary);
+    margin-bottom: 50px;
 }
 
 .landing>* {
@@ -144,11 +145,13 @@ a {
 
 header {
     position: fixed;
+    transform: translateY(-100%);
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     display: flex;
+    flex-wrap: wrap;
     padding: 15px 70px;
     display: flex;
     justify-content: space-between;
@@ -190,9 +193,18 @@ nav a:last-child:active {
     color: white;
 }
 
+#hamburger{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--ascent);
+    border-radius: 5px;
+    padding: 1px 4px;
+    cursor: pointer;
+    display: none;
+}
+
 .features {
-    background-color: var(--primary);
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .features h1 {
@@ -208,7 +220,7 @@ nav a:last-child:active {
     gap: 30px;
     justify-content: center;
     align-items: flex-start;
-    padding: 30px 50px;
+    padding: 30px 0;
     flex-wrap: wrap;
 }
 
@@ -254,12 +266,12 @@ nav a:last-child:active {
 
 }
 
-.recipes{
+.recipes {
     background-color: var(--secondary);
-    padding: 50px 60px;
+    padding: 50px 20px;
 }
 
-.recipes h2{
+.recipes h2 {
     color: rgb(0 0 0 / 50%);
     font-family: "Lobster", cursive;
     font-size: 45px;
@@ -267,28 +279,28 @@ nav a:last-child:active {
     text-align: center;
 }
 
-.recipes h2 span{
+.recipes h2 span {
     color: var(--ascent);
 }
 
-.recipes p{
+.recipes p {
     font-size: 20px;
     font-weight: bold;
     color: rgb(0 0 0/ 50%);
     text-align: center;
 }
 
-.recipes a{
+.recipes a {
     color: var(--ascent);
     text-decoration: underline;
 }
 
-footer{
+footer {
     background-color: var(--ascent);
     padding: 30px 70px;
 }
 
-.footer-wrapper{
+.footer-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -299,33 +311,33 @@ footer{
     gap: 10px;
 }
 
-.copyright{
+.copyright {
     color: rgb(255 255 255/ 50%);
     font-size: 20px;
     flex-shrink: 0;
 }
 
-.attribution{
+.attribution {
     color: rgb(255 255 255/ 50%);
     text-align: center;
     font-size: 18px;
 }
 
-.attribution a{
+.attribution a {
     color: var(--secondary);
 }
 
-.sm{
+.sm {
     display: flex;
     gap: 28px;
 }
 
-.sm svg{
+.sm svg {
     color: rgb(246 251 244/ 50%);
     transition: color 0.2s;
 }
 
-.sm a:hover svg{
+.sm a:hover svg {
     color: var(--primary)
 }
 
@@ -359,9 +371,6 @@ footer{
         align-items: center;
     }
 
-    .landing-text p {
-        text-align: center;
-    }
 }
 
 @media(min-width: 750px) and (max-width: 1150px) {
@@ -375,19 +384,17 @@ footer{
     }
 }
 
-@media (max-width: 500px) {
-    /* TODO: Hamburger */
-}
+@media (max-width: 600px) {
 
-@media (max-width: 600px){
-    .copyright, .sm{
+    .copyright,
+    .sm {
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: 100%;
         text-align: center;
     }
 
-    .sm{
+    .sm {
         justify-content: center;
     }
 }
@@ -429,5 +436,39 @@ footer{
 @media (min-width: 910px) {
     .feature-card:nth-of-type(2n) {
         margin-top: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    header nav{
+        flex-basis: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 18px;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    header nav.active{
+        opacity: 1;
+        height: 165px; /*Hard-coded value. Used just to avoid js. May change*/
+    }
+
+    #hamburger{
+        display: block;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .landing-text p {
+        text-align: center;
+    }
+
+    .landing-text {
+        align-items: center;
+        padding: 30px 20px;
     }
 }
