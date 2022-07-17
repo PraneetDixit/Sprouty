@@ -131,9 +131,16 @@ smoother.effects("span", {
     lag: (i) => (i*0.06) + 0.16
 });
 
+const header = document.querySelector("header");
 const hamburger = document.querySelector("#hamburger");
 const nav = document.querySelector("nav");
 
 hamburger.addEventListener("click", function(){
     nav.classList.toggle("active")
+});
+
+document.addEventListener("click", function(e){
+    if((!header.contains(e.target)) && nav.classList.contains("active")){
+        nav.classList.toggle("active");
+    }
 });
