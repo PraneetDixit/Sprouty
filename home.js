@@ -1,13 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
 let fullHeight = window.innerHeight;
-
-let smoother = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    smooth: 1,
-    effects: "true"
-});
 
 ScrollTrigger.saveStyles(".bowl, .logo-transparent");
 
@@ -104,16 +95,6 @@ ScrollTrigger.matchMedia({
     }
 });
 
-gsap.to("header", {
-    y: 0,
-    duration: 0.3,
-    scrollTrigger: {
-        trigger: ".hero",
-        start: "bottom top",
-        toggleActions: "play none reverse none"
-    }
-});
-
 gsap.fromTo(".feature-card", {
     y: "30px",
     opacity: "0"
@@ -127,20 +108,16 @@ gsap.fromTo(".feature-card", {
     }
 });
 
+gsap.to("header", {
+    y: 0,
+    duration: 0.3,
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "bottom top",
+        toggleActions: "play none reverse none"
+    }
+});
+
 smoother.effects("span", {
     lag: (i) => (i*0.06) + 0.16
-});
-
-const header = document.querySelector("header");
-const hamburger = document.querySelector("#hamburger");
-const nav = document.querySelector("nav");
-
-hamburger.addEventListener("click", function(){
-    nav.classList.toggle("active")
-});
-
-document.addEventListener("click", function(e){
-    if((!header.contains(e.target)) && nav.classList.contains("active")){
-        nav.classList.toggle("active");
-    }
 });

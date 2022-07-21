@@ -1,48 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    --primary: #F6FBF4;
-    --secondary: #F5DF99;
-    --tertiary: #5FD068;
-    --ascent: #4B8673;
-}
-
-body {
-    overflow: overlay;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
-    font-family: "Manrope", sans-serif;
-    background-color: var(--primary);
-}
-
-body::-webkit-scrollbar {
-    width: 11px;
-}
-
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    ;
-}
-
-body::-webkit-scrollbar-thumb:active {
-    background-color: rgba(0, 0, 0, 0.8);
-    ;
-}
-
 .hero {
     min-height: 100vh;
     background: url("img/hero8.jpg") center/100% 100% no-repeat;
@@ -60,10 +15,6 @@ body::-webkit-scrollbar-thumb:active {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-img {
-    display: block;
 }
 
 .see-through .logo-transparent {
@@ -139,69 +90,7 @@ img {
     display: inline-block;
 }
 
-a {
-    text-decoration: none;
-}
 
-header {
-    position: fixed;
-    transform: translateY(-100%);
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-}
-
-header>a img {
-    height: 55px;
-    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 50%));
-}
-
-header nav {
-    display: flex;
-    gap: 35px;
-    align-items: center;
-}
-
-nav a {
-    color: var(--ascent);
-    font-size: 17px;
-    font-family: "Manrope", sans-serif;
-    transition: transform 0.1s ease-in;
-}
-
-nav a:hover {
-    transform: scale(1.05);
-}
-
-nav a:last-child {
-    padding: 8px 15px;
-    border: 2px solid var(--ascent);
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in transform 0.1s ease-in;
-}
-
-nav a:last-child:active {
-    background-color: var(--ascent);
-    color: white;
-}
-
-#hamburger{
-    background-color: transparent;
-    outline: none;
-    border: 2px solid var(--ascent);
-    border-radius: 5px;
-    padding: 1px 4px;
-    cursor: pointer;
-    display: none;
-}
 
 .features {
     margin-bottom: 50px;
@@ -295,50 +184,15 @@ nav a:last-child:active {
     text-decoration: underline;
 }
 
-footer {
-    background-color: var(--ascent);
-    padding: 30px 70px;
+.whatsapp{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: block;
 }
 
-.footer-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgb(246 251 244/ 50%);
-    flex-wrap: wrap-reverse;
-    gap: 10px;
-}
-
-.copyright {
-    color: rgb(255 255 255/ 50%);
-    font-size: 20px;
-    flex-shrink: 0;
-}
-
-.attribution {
-    color: rgb(255 255 255/ 50%);
-    text-align: center;
-    font-size: 18px;
-}
-
-.attribution a {
-    color: var(--secondary);
-}
-
-.sm {
-    display: flex;
-    gap: 28px;
-}
-
-.sm svg {
-    color: rgb(246 251 244/ 50%);
-    transition: color 0.2s;
-}
-
-.sm a:hover svg {
-    color: var(--primary)
+.whatsapp img{
+    filter: drop-shadow(0 0 2px var(--semi-trans));
 }
 
 @media(min-width: 950px) {
@@ -349,10 +203,6 @@ footer {
 }
 
 @media(max-width: 750px) {
-    header {
-        padding: 15px 30px;
-    }
-
     .landing {
         position: relative;
     }
@@ -381,21 +231,6 @@ footer {
     .hero .bowl {
         width: 300px;
         margin: 50px 0 0 50px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .copyright,
-    .sm {
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    .sm {
-        justify-content: center;
     }
 }
 
@@ -440,29 +275,6 @@ footer {
 }
 
 @media (max-width: 500px) {
-    header nav{
-        flex-basis: 100%;
-        justify-content: center;
-        flex-direction: column;
-        gap: 18px;
-        height: 0px;
-        overflow: hidden;
-        transition: height 0.5s;
-    }
-
-    header nav.active{
-        opacity: 1;
-        height: 165px; /*Hard-coded value. Used just to avoid js. May change*/
-    }
-
-    #hamburger{
-        display: block;
-    }
-
-    footer {
-        padding: 30px 20px;
-    }
-
     .landing-text p {
         text-align: center;
     }
