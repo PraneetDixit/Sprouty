@@ -1,3 +1,7 @@
+header{
+    transform: translateY(-100%);
+}
+
 .hero {
     min-height: 100vh;
     background: url("img/hero8.jpg") center/100% 100% no-repeat;
@@ -138,7 +142,7 @@
     width: 65%;
     margin: 0 auto;
     aspect-ratio: 1;
-    background: var(--url) no-repeat center/60% 60%, linear-gradient(var(--secondary), var(--secondary));
+    background: var(--url) no-repeat center/60% 60%, linear-gradient(var(--primary), var(--primary));
     border-radius: 15px;
 }
 

@@ -1,0 +1,150 @@
+.banner{
+    margin-top: 80px;
+    height: 250px;
+    background: linear-gradient(var(--semi-trans), var(--semi-trans)), var(--bg) center;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px 45px;
+}
+
+.banner h1{
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: 500;
+
+}
+
+section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+section>div {
+    flex-shrink: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+}
+
+
+h2 {
+    font-size: 24px;
+    color: var(--ascent);
+}
+
+table{
+    width: 90%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border: none;
+    color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table td,
+table th {
+    border: none;
+    padding: 6px 8px;
+}
+
+table th{
+    font-size: 18px;
+    color: white;
+    margin: -20px 0 -10px;
+    font-weight: 500;
+    background-color: var(--ascent);
+}
+
+tr:nth-child(even){
+    background-color: aliceblue;
+}
+
+li {
+    color: #222222;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+li::marker {
+    color: var(--ascent);
+}
+
+.nutrition, .health{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 0px rgb(0 0 0 / 30%);
+    flex-basis: 28%;
+}
+
+.recipes{
+    flex-basis: 30%;
+    justify-content: center;
+}
+
+.recipes div{
+    aspect-ratio: 1;
+    background: linear-gradient(var(--semi-trans), var(--semi-trans)), url("../img/recipes.jpg") center/cover;
+    border-radius: 50%;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.recipes p{
+    text-align: center;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.recipes a{
+    color: var(--tertiary);
+    text-decoration: underline;
+}
+
+.cta{
+    background-color: var(--secondary);
+    font-size: 25px;
+    color: var(--semi-trans);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.cta a{
+    color: var(--ascent);
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px){
+    section > div{
+        flex-basis: 420px !important;
+    }
+
+    .nutrition, .health{
+        order: 1;
+    }
+
+    .recipes{
+        order: 2;
+    }
+}
+
+@media (max-width: 900px){
+    section > div{
+        flex-basis: 45% !important;
+    }
+}
+
+@media (max-width: 720px){
+    section > div{
+        flex-basis: min(90%, 420px) !important;
+    }
+}

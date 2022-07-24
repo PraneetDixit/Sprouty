@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#4B8673" />
-    <title>Contact Us | Sprouty</title>
+    <title>Peanut sprouts | Sprouty</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="product-page.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/site.webmanifest">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/site.webmanifest">
+    <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XNXE5GY60"></script>
@@ -34,57 +34,95 @@
 <body>
     <header>
         <a href="#">
-            <img src="img/sprouty_logo.png" alt="Sprouty">
+            <img src="../img/sprouty_logo.png" alt="Sprouty">
         </a>
         <button id="hamburger">
-            <img src="img/hamburger.svg" alt="Menu">
+            <img src="../img/hamburger.svg" alt="Menu">
         </button>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="#">Contact</a>
+            <a href="../index.html">Home</a>
+            <a href="../products.html">Products</a>
+            <a href="../contact.html">Contact</a>
         </nav>
     </header>
-    <div id="smooth-wrapper">
+    <div id="smooth-container">
         <div id="smooth-content">
+            <div class="banner" style="--bg: url('../img/peanut.png')">
+                <h1>Sprouty Fresh Peanut Sprouts</h1>
+            </div>
             <section>
-                <div class="details">
-                    <h2>Get in Touch</h2>
-                    <div class="tabs-container">
-                        <div class="contact-tab">
-                            <img src="img/email.png" alt="Email" width="40px">
-                            <h3>Email</h3>
-                            <p>sproutyindia@gmail.com</p>
-                        </div>
-                        <div class="contact-tab">
-                            <img src="img/location.png" alt="Address" width="40px">
-                            <h3>Address</h3>
-                            <p>
-                                161 Dharamraj Colony<br>
-                                Street no. 2, Aerodrum Road<br>
-                                Indore (MP)- 452009
-                            </p>
-                        </div>
-                    </div>
-                    <div class="wa">Drop a message on <a href="https://api.whatsapp.com/send?phone=918290701591"
-                            target="_blank">Whatsapp</a></div>
+                <div class="nutrition">
+                    <h2>Nutritional Information</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Nutritional facts per 100g</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Energy</td>
+                                <td>564.28 kcal</td>
+                            </tr>
+                            <tr>
+                                <td>Protein</td>
+                                <td>25 g</td>
+                            </tr>
+                            <tr>
+                                <td>Carbohydrates</td>
+                                <td>14.28 g</td>
+                            </tr>
+                            <tr>
+                                <td>Dietary Fibres</td>
+                                <td>7.14 g</td>
+                            </tr>
+                            <tr>
+                                <td>Total Sugar</td>
+                                <td>4.72 g</td>
+                            </tr>
+                            <tr>
+                                <td>Added Sugar</td>
+                                <td>0 g</td>
+                            </tr>
+                            <tr>
+                                <td>Total Fats</td>
+                                <td>46.42 g</td>
+                            </tr>
+                            <tr>
+                                <td>Saturated Fats</td>
+                                <td>46.42 g</td>
+                            </tr>
+                            <tr>
+                                <td>Trans Fats</td>
+                                <td>0 g</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="form">
-                    <h2>Never miss any update!</h2>
-                    <h3>Subscribe to recieve latest product updates and exclusive offers</h3>
-                    <form
-                        action="https://app.us8.list-manage.com/subscribe/post-json?u=077b15384c77ea29ab80ad593&amp;id=525f277520&c=&"
-                        id="subscribe" method="get" name="mc-embedded-subscribe-form">
-                        <input type="text" name="FNAME" placeholder="Your name" required>
-                        <input type="number" name="PHONE" id="mobile" placeholder="Mobile no." required minlength="10">
-                        <input type="email" name="EMAIL" id="email" placeholder="Email ID" required>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                name="b_077b15384c77ea29ab80ad593_525f277520" tabindex="-1" value=""></div>
-                        <input type="submit" name="subscribe" value="Subscribe">
-                    </form>
-                    <p id="form-status"></p>
+                <div class="recipes">
+                    <div>
+                        <p>
+                            Let's combine health with taste. Make your kids love sprouts with our awesome <a
+                                href="https://www.facebook.com/page/104839442303062/search/?q=Peanut%20sprout"
+                                target="_blank">Peanut sprout recipes</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="health">
+                    <h2>Health benefits -</h2>
+                    <ul class="benifits">
+                        <li>Bolsters Immunity</li>
+                        <li>Aids digestive health</li>
+                        <li>Boosts brain functioning</li>
+                        <li>Repairment of Muscles</li>
+                        <li>Helps treat skin problems</li>
+                        <li>Promote energy levels</li>
+                        <li>Protects Heart</li>
+                    </ul>
                 </div>
             </section>
+            <div class="cta">For order related enquiries, drop a message at <a
+                    href="https://api.whatsapp.com/send?phone=918290701591" target="_blank">Whatsapp</a></div>
             <footer>
                 <div class="footer-wrapper">
                     <p class="copyright">Copyright 2022. All rights reserved</p>
@@ -144,9 +182,28 @@
     </div>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="ScrollSmoother.js"></script>
-    <script src="global.js"></script>
-    <script src="contact.js"></script>
+    <script src="../ScrollSmoother.js"></script>
+    <script src="../global.js"></script>
+    <script>
+        let timeline = gsap.timeline();
+        timeline.fromTo(".nutrition", {
+            x: "-50px"
+        }, {
+            x: "0px",
+            opacity: "1",
+            delay: "1"
+        }).fromTo(".recipes", {
+            y: "50px"
+        }, {
+            y: "0px",
+            opacity: 1
+        }).fromTo(".health", {
+            x: "50px"
+        }, {
+            x: "0px",
+            opacity: 1
+        });
+    </script>
 </body>
 
 </html>
