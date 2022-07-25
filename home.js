@@ -77,19 +77,14 @@ ScrollTrigger.matchMedia({
             },
             scale: "0.9"
         });
-        gsap.fromTo(".bowl", {
-            x: 0,
-            y: 0
-        }, {
+        gsap.set(".bowl", {
             x: () => {
                 return document.querySelector(".see-through").offsetWidth / 2 - 170;
             },
             y: () => {
                 return document.querySelector(".see-through").offsetHeight * 3 / 4 - 200;
             },
-            scale: "0.7"
-        });
-        gsap.set(".bowl", {
+            scale: "0.7",
             opacity: "1",
         });
     }
